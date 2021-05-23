@@ -37,8 +37,8 @@ router.get("/get-game-by-id/:id", function (req, res) {
 router.get("/get-game-by-name/:name", function (req, res) {
   let foundGame = games.findIndex(function (games) {
     return (
-      games.game.replaceAll(" ", "").toLowerCase() ===
-      req.params.name.toLowerCase()
+      games.game.toLowerCase() ===
+      req.params.name.replaceAll("%20", " ").toLowerCase()
     );
   });
 
