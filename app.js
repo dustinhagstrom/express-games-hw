@@ -20,6 +20,8 @@ app.use(express.json());
 app.use("/", indexRouter);
 app.use("/api/game", gameRouter);
 
-app.listen("3000", function (req, res) {
-  console.log(`Server is running on port: ${3000}!!!`);
-});
+// app.listen("3000", function (req, res) {
+//   console.log(`Server is running on port: ${3000}!!!`);
+// });
+
+module.exports = app;
